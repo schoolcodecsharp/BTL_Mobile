@@ -31,16 +31,23 @@ class SearchActivity : AppCompatActivity() {
         }
 
         dbHelper = DatabaseHelper(this)
+        
+        val ivBack = findViewById<android.widget.ImageView>(R.id.ivBackFromSearch)
+        val ivClear = findViewById<android.widget.ImageView>(R.id.ivClearSearch)
         etSearch = findViewById(R.id.etSearch)
         rvSearchResults = findViewById(R.id.rvSearchResults)
+
+        ivBack.setOnClickListener {
+            finish()
+        }
+        
+        ivClear.setOnClickListener {
+            etSearch.text?.clear()
+        }
 
         setupRecyclerView()
         loadAllTasks()
         setupSearch()
-
-        findViewById<android.widget.ImageView>(R.id.ivBack).setOnClickListener {
-            finish()
-        }
     }
 
     private fun setupRecyclerView() {
