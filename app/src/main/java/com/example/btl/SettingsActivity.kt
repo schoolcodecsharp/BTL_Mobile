@@ -22,6 +22,12 @@ class SettingsActivity : AppCompatActivity() {
 
         currentUserId = intent.getIntExtra("USER_ID", -1)
 
+        val ivBack = findViewById<android.widget.ImageView>(R.id.ivBack)
+        
+        ivBack.setOnClickListener {
+            finish()
+        }
+
         findViewById<android.widget.ImageView>(R.id.ivBack).setOnClickListener {
             finish()
         }

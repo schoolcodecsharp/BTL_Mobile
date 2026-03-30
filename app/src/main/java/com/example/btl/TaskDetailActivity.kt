@@ -34,13 +34,29 @@ class TaskDetailActivity : AppCompatActivity() {
         dbHelper = DatabaseHelper(this)
         notificationHelper = NotificationHelper(this)
 
+        val ivBack = findViewById<android.widget.ImageView>(R.id.ivBackFromDetail)
+        val ivDelete = findViewById<android.widget.ImageView>(R.id.ivDeleteTask)
         val etTitle = findViewById<TextInputEditText>(R.id.etDetailTitle)
         val etDescription = findViewById<TextInputEditText>(R.id.etDetailDescription)
         etDeadline = findViewById(R.id.etDetailDeadline)
         val spinnerPriority = findViewById<Spinner>(R.id.spinnerDetailPriority)
         val spinnerStatus = findViewById<Spinner>(R.id.spinnerDetailStatus)
         val btnUpdate = findViewById<Button>(R.id.btnUpdateTask)
-        val btnDelete = findViewById<Button>(R.id.btnDeleteTask)
+        val btnCancel = findViewById<Button>(R.id.btnCancelDetail)
+
+        // Back button
+        ivBack.setOnClickListener {
+            finish()
+        }
+        
+        // Delete button
+        ivDelete.setOnClickListener {
+            showDeleteConfirmDialog()
+        }
+        
+        btnCancel.setOnClickListener {
+            finish()
+        }
 
         // Setup spinners
         val priorityAdapter = ArrayAdapter.createFromResource(

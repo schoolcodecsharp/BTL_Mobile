@@ -30,6 +30,16 @@ class RegisterActivity : AppCompatActivity() {
         val etConfirmPassword = findViewById<TextInputEditText>(R.id.etRegConfirmPassword)
         val btnRegister = findViewById<Button>(R.id.btnRegister)
         val tvBackToLogin = findViewById<TextView>(R.id.tvBackToLogin)
+        val ivBackToLogin = findViewById<android.widget.ImageView>(R.id.ivBackToLogin)
+
+        // Back buttons
+        ivBackToLogin.setOnClickListener {
+            finish()
+        }
+        
+        tvBackToLogin.setOnClickListener {
+            finish()
+        }
 
         btnRegister.setOnClickListener {
             val username = etUsername.text.toString().trim()

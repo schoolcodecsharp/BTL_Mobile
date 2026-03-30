@@ -33,6 +33,7 @@ class AddTaskActivity : AppCompatActivity() {
         dbHelper = DatabaseHelper(this)
         notificationHelper = NotificationHelper(this)
 
+        val ivBack = findViewById<android.widget.ImageView>(R.id.ivBackFromAdd)
         val etTitle = findViewById<TextInputEditText>(R.id.etTaskTitle)
         val etDescription = findViewById<TextInputEditText>(R.id.etTaskDescription)
         etDeadline = findViewById(R.id.etTaskDeadline)
@@ -40,6 +41,11 @@ class AddTaskActivity : AppCompatActivity() {
         val spinnerStatus = findViewById<Spinner>(R.id.spinnerStatus)
         val btnSave = findViewById<Button>(R.id.btnSaveTask)
         val btnCancel = findViewById<Button>(R.id.btnCancelTask)
+
+        // Back button
+        ivBack.setOnClickListener {
+            finish()
+        }
 
         // Setup spinners
         val priorityAdapter = ArrayAdapter.createFromResource(
