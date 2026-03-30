@@ -80,6 +80,12 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("USER_ID", currentUserId)
             startActivity(intent)
         }
+        
+        // Long click for sort/filter menu
+        ivProfile.setOnLongClickListener {
+            showOptionsMenu()
+            true
+        }
 
         // Filter chips
         chipAll.setOnClickListener {
@@ -95,16 +101,6 @@ class MainActivity : AppCompatActivity() {
         chipDone.setOnClickListener {
             currentFilter = "done"
             applyFilter()
-        }
-        
-        // Sort menu
-        findViewById<android.widget.ImageView>(R.id.ivSort)?.setOnClickListener {
-            showSortMenu()
-        }
-        
-        // Date filter menu
-        findViewById<android.widget.ImageView>(R.id.ivFilter)?.setOnClickListener {
-            showDateFilterMenu()
         }
 
         fabAdd.setOnClickListener {
@@ -296,6 +292,19 @@ class MainActivity : AppCompatActivity() {
                 }
                 applyFilter()
                 Toast.makeText(this, "Đã lọc: ${options[which]}", Toast.LENGTH_SHORT).show()
+            }
+            .show()
+    }
+    
+    private fun showOptionsMenu() {
+        val options = arrayOf("Sắp xếp", "Lọc theo thời gian")
+        androidx.appcompat.app.AlertDialog.Builder(this)
+            .setTitle("Tùy chọn")
+            .setItems(options) { _, which ->
+                when (which) {
+                    0 -> showSortMenu()
+                    1 -> showDateFilterMenu()
+                }
             }
             .show()
     }
