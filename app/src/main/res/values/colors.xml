@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Modern Primary Colors -->
+    <color name="primary">#6366F1</color>
+    <color name="primary_dark">#4F46E5</color>
+    <color name="primary_light">#A5B4FC</color>
+    <color name="accent">#EC4899</color>
+    <color name="accent_light">#F9A8D4</color>
+    
+    <!-- Background Colors -->
+    <color name="background">#F8FAFC</color>
+    <color name="background_dark">#0F172A</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_background_dark">#1E293B</color>
+    <color name="surface">#F1F5F9</color>
+    <color name="surface_dark">#334155</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#0F172A</color>
+    <color name="text_primary_dark">#F1F5F9</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="text_secondary_dark">#94A3B8</color>
+    <color name="text_hint">#CBD5E1</color>
+    
+    <!-- Priority Colors -->
+    <color name="priority_high">#EF4444</color>
+    <color name="priority_high_bg">#FEE2E2</color>
+    <color name="priority_medium">#F59E0B</color>
+    <color name="priority_medium_bg">#FEF3C7</color>
+    <color name="priority_low">#10B981</color>
+    <color name="priority_low_bg">#D1FAE5</color>
+    
+    <!-- Status Colors -->
+    <color name="status_done">#10B981</color>
+    <color name="status_done_bg">#D1FAE5</color>
+    <color name="status_in_progress">#3B82F6</color>
+    <color name="status_in_progress_bg">#DBEAFE</color>
+    <color name="status_not_started">#6B7280</color>
+    <color name="status_not_started_bg">#F3F4F6</color>
+    
+    <!-- Additional Colors -->
+    <color name="success">#10B981</color>
+    <color name="warning">#F59E0B</color>
+    <color name="error">#EF4444</color>
+    <color name="info">#3B82F6</color>
+    
+    <!-- Gradient Colors -->
+    <color name="gradient_start">#6366F1</color>
+    <color name="gradient_end">#EC4899</color>
+    
+    <!-- Divider -->
+    <color name="divider">#E2E8F0</color>
+    <color name="divider_dark">#475569</color>
+</resources>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BTL</string>
+    
+    <string-array name="priority_levels">
+        <item>Thấp</item>
+        <item>Trung bình</item>
+        <item>Cao</item>
+    </string-array>
+    
+    <string-array name="status_levels">
+        <item>Chưa bắt đầu</item>
+        <item>Đang làm</item>
+        <item>Hoàn thành</item>
+    </string-array>
+</resources>
