@@ -15,7 +15,7 @@ class SearchActivity : AppCompatActivity() {
     private lateinit var dbHelper: DatabaseHelper
     private lateinit var taskAdapter: TaskAdapter
     private lateinit var rvSearchResults: RecyclerView
-    private lateinit var etSearch: TextInputEditText
+    private lateinit var etSearch: android.widget.EditText
     private var currentUserId: Int = -1
     private var allTasks = mutableListOf<Task>()
 
