@@ -120,10 +120,6 @@ class TaskDetailActivity : AppCompatActivity() {
                 Toast.makeText(this, "Lỗi: ${e.message}", Toast.LENGTH_LONG).show()
             }
         }
-
-        btnDelete.setOnClickListener {
-            showDeleteConfirmDialog()
-        }
     }
 
     private fun loadTaskData(
