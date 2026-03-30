@@ -26,11 +26,17 @@ class ProfileActivity : AppCompatActivity() {
 
         dbHelper = DatabaseHelper(this)
 
+        val ivBackToMain = findViewById<android.widget.ImageView>(R.id.ivBackToMain)
         val tvUsername = findViewById<TextView>(R.id.tvProfileUsername)
         val tvEmail = findViewById<TextView>(R.id.tvProfileEmail)
         val tvTotalTasks = findViewById<TextView>(R.id.tvTotalTasks)
         val tvCompletedTasks = findViewById<TextView>(R.id.tvCompletedTasks)
         val btnLogout = findViewById<Button>(R.id.btnLogout)
+
+        // Back button
+        ivBackToMain.setOnClickListener {
+            finish() // Quay về MainActivity
+        }
 
         // Load user info
         loadUserInfo(tvUsername, tvEmail)
